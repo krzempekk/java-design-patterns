@@ -13,11 +13,14 @@ public class Main {
         CopyCommand copyCommand = new CopyCommand(app, app.activeEditor);
         app.executeCommand(copyCommand);
 
+        System.out.println("Text in editors after copy command execution:");
+        app.showTextInEditors();
+
         app.setActiveEditor(1);
         PasteCommand pasteCommand = new PasteCommand(app, app.activeEditor);
         app.executeCommand(pasteCommand);
 
-        System.out.println("Text in editors after commands execution:");
+        System.out.println("Text in editors after paste command execution:");
         app.showTextInEditors();
     }
 
@@ -26,7 +29,7 @@ public class Main {
 
         app.activeEditor.text = "Sample text";
 
-        System.out.println("Text in editor before command execution:");
+        System.out.println("Text in editor before commands execution:");
         app.showTextInEditors();
 
         CutCommand cutCommand = new CutCommand(app, app.activeEditor);
