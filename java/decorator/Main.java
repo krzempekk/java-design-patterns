@@ -2,7 +2,7 @@ package decorator;
 
 public class Main {
     public static void main(String[] args) {
-        String salaryRecords = "Name,Salary;John Smith,100000;Steven Jobs,912000";
+        String salaryRecords = "Ala ma kota";
         DataSourceDecorator encoded = new EncryptionDecorator(
                 new CompressionDecorator(
                         new FileDataSource("out/OutputDemo.txt")));
