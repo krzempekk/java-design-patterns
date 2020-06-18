@@ -8,12 +8,11 @@ public class Main {
                         new FileDataSource("out/compressedFile.txt")));
         encodedAndCompressed.writeData(text);
         DataSource justRead = new FileDataSource("out/compressedFile.txt");
-
-        System.out.println("- String ----------------");
+        System.out.println("- Base string");
         System.out.println(text);
-        System.out.println("- Encoded and compressed --------------");
+        System.out.println("- Encoded and compressed");
         System.out.println(justRead.readData());
-        System.out.println("- Decoded --------------");
+        System.out.println("- Decoded and decompressed");
         System.out.println(encodedAndCompressed.readData());
     }
 }
